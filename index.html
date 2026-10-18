@@ -72,8 +72,22 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
 .cvframe{width:100%;height:80vh;border:1px solid var(--rule);background:#fff}
 .cvpage{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--rule);box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .cvnote{font-family:var(--ui);font-size:.8rem;color:var(--muted)}
+.flow{display:flex;align-items:stretch;gap:8px;margin:8px 0 4px}
+.flow .node{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--rule);border-radius:4px;background:var(--bg)}
+.flow .node.core{background:var(--ewha);border-color:var(--ewha);color:var(--ewha-ink)}
+.flow .node.core span,.flow .node.core span:last-child{color:var(--ewha-soft)}
+.flow .n{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.08em;color:var(--muted)}
+.flow b{font-family:var(--display);font-weight:600;font-size:1.15rem;line-height:1.15}
+.flow .node span:last-child{font-family:var(--ui);font-size:.74rem;color:var(--muted)}
+.flow .arw{flex:0 0 18px;align-self:center;height:1px;background:var(--muted);position:relative}
+.flow .arw::after{content:"";position:absolute;right:-1px;top:-4px;border-left:6px solid var(--muted);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.stage{display:flex;flex-direction:column;gap:6px;margin-top:22px}
+.stg{font-family:var(--display);font-weight:600;font-size:1.45rem;line-height:1.2;color:var(--fg)}
+.stg span{font-family:var(--ui);font-size:.75rem;font-weight:600;letter-spacing:.08em;color:var(--accent);margin-right:6px;vertical-align:middle}
+.sint{color:var(--muted);font-style:italic}
+@media (max-width:560px){.flow{flex-direction:column}.flow .arw{display:none}}
 .ph{font-family:var(--display);font-weight:600;font-size:1.6rem;margin:28px 0 0}
-.pp{display:flex;flex-direction:column;gap:6px;padding-block:20px;border-top:1px solid var(--rule)}
+.pp{display:flex;flex-direction:column;gap:6px;padding-block:16px;border-top:1px solid var(--rule)}
 .pp h3{font-family:var(--body);font-weight:600;font-size:1.08rem;line-height:1.35;margin:0}
 .pstat{font-family:var(--ui);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 .pau{font-family:var(--ui);font-size:.82rem;color:var(--muted)}
@@ -135,93 +149,76 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
     <section class="col" id="p-research" hidden>
       <p class="label">Research</p>
       <p class="question">How do new ventures hold on to what makes them their own while outside forces push them to change?</p>
-      <p>I follow this question in three moves: what ventures build on the inside, what pushes on them from the outside, and what they choose to keep.</p>
-      <ol class="arc">
-        <li>
-          <div class="step">01<em>Inside</em></div>
-          <div><p>Startups build their own structures, and many flatten hierarchy in the hope of more open, supportive relationships. Studying university students, the community where many founding teams form, I found the opposite. Reducing hierarchy narrowed the distance between seniors and juniors but also weakened ties among peers, because clear roles had given people a legitimate way to ask for help.</p>
-          <span class="src">Dehierarchized but Not Connected · 84 interviews</span></div>
-        </li>
-        <li>
-          <div class="step">02<em>Outside</em></div>
-          <div><p>But ventures do not move on their own. Support intermediaries filter and translate which outsider ideas come to count as novel. Shocks also spread across a category: after Cambridge Analytica, social-platform startups that did nothing wrong became less likely to raise funding, most sharply in wellness and health.</p>
-          <span class="src">Made at the Gate · When Big Firms Stumble, Startups Pay · 51,738 startups</span></div>
-        </li>
-        <li>
-          <div class="step">03<em>Back to the core</em></div>
-          <div><p>Are startups then powerless? Not entirely. Within the same stigmatized category, startups designed to let users control their own exposure were more likely to raise funding. And JUMP, a social enterprise working with large corporations, has kept its triangular mentoring model by changing its form rather than giving it up.</p>
-          <span class="src">When Big Firms Stumble, Startups Pay · JUMP field study</span></div>
-        </li>
-      </ol>
-      <p class="next"><b>Next</b>Who starts ventures in low-hierarchy communities, when reliance on outside support pulls startups off course, and which identities and design choices help ventures withstand category shocks.</p>
 
-      <h2 class="ph">Working Papers</h2>
+      <div class="flow" aria-label="Research flow">
+        <div class="node"><span class="n">01</span><b>Inside</b><span>What ventures build</span></div>
+        <span class="arw" aria-hidden="true"></span>
+        <div class="node"><span class="n">02</span><b>Outside</b><span>What pushes on them</span></div>
+        <span class="arw" aria-hidden="true"></span>
+        <div class="node core"><span class="n">03</span><b>Back to the core</b><span>What they choose to keep</span></div>
+      </div>
 
-      <article class="pp">
-        <p class="pstat">Working Paper</p>
-        <h3>Dehierarchized but Not Connected: The Decoupling of Vertical and Lateral Governance</h3>
-        <p class="pau">Single-authored</p>
-        <p>Organizations flatten hierarchy expecting more open and collaborative relationships. Drawing on 84 in-depth interviews with university students analyzed with the Gioia method, this paper shows that reducing hierarchy narrows vertical distance but also weakens lateral ties. Clear senior–junior roles had given people a legitimate script for asking peers for help; without them, people knew each other less and held back.</p>
-        <p class="plab">Presentations</p>
-        <ul>
-          <li>2026 Academy of Management Annual Meeting, PDW: Decentralization in Organizations (Philadelphia, US)</li>
-          <li>2026 Academy of Management Annual Meeting, PDW: Publishing Organizational Structure and Design Papers (Philadelphia, US)</li>
-          <li>2026 <i>JMS</i> Publishing Workshop, Seoul National University (Seoul, South Korea)*</li>
-          <li>2026 Korean Academy of Management Spring Conference (South Korea)*</li>
-        </ul>
-      </article>
+      <div class="stage">
+        <p class="stg"><span>01</span> Inside</p>
+        <p class="sint">Startups build their own structures, and many flatten hierarchy in the hope of more open, supportive relationships.</p>
+        <article class="pp">
+          <p class="pstat">Working Paper · Single-authored</p>
+          <h3>Dehierarchized but Not Connected: The Decoupling of Vertical and Lateral Governance</h3>
+          <p>Drawing on 84 in-depth interviews with university students analyzed with the Gioia method, this paper shows that reducing hierarchy narrows vertical distance but also weakens lateral ties. Clear senior–junior roles had given people a legitimate script for asking peers for help; without them, people knew each other less and held back.</p>
+          <p class="plab">Presentations</p>
+          <ul>
+            <li>2026 Academy of Management Annual Meeting, PDW: Decentralization in Organizations (Philadelphia, US)</li>
+            <li>2026 Academy of Management Annual Meeting, PDW: Publishing Organizational Structure and Design Papers (Philadelphia, US)</li>
+            <li>2026 <i>JMS</i> Publishing Workshop, Seoul National University (Seoul, South Korea)*</li>
+            <li>2026 Korean Academy of Management Spring Conference (South Korea)*</li>
+            <li>2025 Korean Career·Entrepreneurship &amp; Business Association Fall Conference (South Korea)*</li>
+          </ul>
+        </article>
+      </div>
 
-      <article class="pp">
-        <p class="pstat">Working Paper</p>
-        <h3>When Big Firms Stumble, Startups Pay: Category Spillover and Startup Responses</h3>
-        <p class="pau">Single-authored</p>
-        <p>Using Facebook's 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest in wellness and health, the categories closest to the scandal's privacy concerns, and among startups evaluated after the event. Startups designed to let users control their own exposure were more likely to raise funding despite the category stigma.</p>
-        <p class="plab">Awards</p>
-        <ul>
-          <li>Finalist (1 of 6 shortlisted papers), Graduate Student Paper Competition, 2026 KASBA Fall Conference (final results announced Nov. 2026)</li>
-        </ul>
-        <p class="plab">Presentations</p>
-        <ul>
-          <li>2026 Korean Academy of Management Fall Conference (South Korea)†</li>
-          <li>2026 Korean Academic Society of Business Administration (KASBA) Fall Conference, Graduate Student Paper Competition (South Korea)*†</li>
-        </ul>
-      </article>
+      <div class="stage">
+        <p class="stg"><span>02</span> Outside</p>
+        <p class="sint">But ventures do not move on their own. Shocks spread across their category, and support organizations shape what counts as new.</p>
+        <article class="pp">
+          <p class="pstat">Working Paper · Single-authored</p>
+          <h3>When Big Firms Stumble, Startups Pay: Category Spillover and Startup Responses</h3>
+          <p>Using Facebook's 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest in wellness and health, closest to the scandal's privacy concerns, and among startups evaluated after the event.</p>
+          <p class="plab">Awards</p>
+          <ul>
+            <li>Finalist (1 of 6 shortlisted papers), Graduate Student Paper Competition, 2026 KASBA Fall Conference (final results announced Nov. 2026)</li>
+          </ul>
+          <p class="plab">Presentations</p>
+          <ul>
+            <li>2026 Korean Academy of Management Fall Conference (South Korea)†</li>
+            <li>2026 Korean Academic Society of Business Administration (KASBA) Fall Conference, Graduate Student Paper Competition (South Korea)*†</li>
+          </ul>
+        </article>
+        <article class="pp">
+          <p class="pstat">Under Review · with Eunki Ro and Sang-Joon Kim</p>
+          <h3>Made at the Gate: How Support Intermediaries Constitute Outsider Innovation in Social Entrepreneurship</h3>
+          <p>This qualitative study shows that support intermediaries filter and translate outsider ideas, shaping which of them come to be recognized as novel, rather than novelty arising from the ventures alone. Submitted to <i>Research Policy</i>.</p>
+          <p class="plab">Presentations</p>
+          <ul>
+            <li>2026 Korean Academic Society of Business Administration (KASBA) Summer Joint Conference (South Korea)</li>
+            <li>2026 Korean Society of Business Venturing and Entrepreneurship Spring Conference (South Korea)*</li>
+          </ul>
+        </article>
+      </div>
 
-      <article class="pp">
-        <p class="pstat">Under Review</p>
-        <h3>Made at the Gate: How Support Intermediaries Constitute Outsider Innovation in Social Entrepreneurship</h3>
-        <p class="pau">with Eunki Ro and Sang-Joon Kim</p>
-        <p>Where does the novelty of outsider ventures come from? This qualitative study shows that support intermediaries filter and translate outsider ideas, shaping which of them come to be recognized as novel, rather than novelty arising from the ventures alone.</p>
-        <p class="plab">Status</p>
-        <ul><li>Submitted to <i>Research Policy</i></li></ul>
-        <p class="plab">Presentations</p>
-        <ul>
-          <li>2026 Korean Academic Society of Business Administration (KASBA) Summer Joint Conference (South Korea)</li>
-          <li>2026 Korean Society of Business Venturing and Entrepreneurship Spring Conference (South Korea)*</li>
-        </ul>
-      </article>
-
-      <article class="pp">
-        <p class="pstat">Work in Progress</p>
-        <h3>Glocalization Strategy of a Korean Social Venture</h3>
-        <p class="pau">with Boram Do, Sang-Joon Kim, and Sung-Chul Noh</p>
-        <p>A field case study of JUMP, a social enterprise that has kept its core model, triangular mentoring, while changing its form to work with large corporate partners and prepare for global expansion.</p>
-        <p class="plab">Presentations</p>
-        <ul>
-          <li>2026 IRKOM Research Project, Final Presentation, Yonsei University (Seoul, South Korea)</li>
-          <li>2025 IRKOM Research Project, Interim Presentation, Yonsei University (Seoul, South Korea)</li>
-        </ul>
-      </article>
-
-      <article class="pp">
-        <p class="pstat">Conference Paper</p>
-        <h3>FOSO (Fear of Social Offer): Barriers to Entrepreneurship at a Women's University</h3>
-        <p class="pau">with Sang-Joon Kim</p>
-        <p class="plab">Presentations</p>
-        <ul>
-          <li>2025 Korean Career·Entrepreneurship &amp; Business Association Fall Conference (South Korea)</li>
-        </ul>
-      </article>
+      <div class="stage">
+        <p class="stg"><span>03</span> Back to the core</p>
+        <p class="sint">Are startups then powerless? Not entirely. In <i>When Big Firms Stumble</i>, startups designed to let users control their own exposure were more likely to raise funding despite the category stigma.</p>
+        <article class="pp">
+          <p class="pstat">Work in Progress · with Boram Do, Sang-Joon Kim, and Sung-Chul Noh</p>
+          <h3>Glocalization Strategy of a Korean Social Venture</h3>
+          <p>A field case study of JUMP, a social enterprise that has kept its core model, triangular mentoring, while changing its form to work with large corporate partners and prepare for global expansion.</p>
+          <p class="plab">Presentations</p>
+          <ul>
+            <li>2026 IRKOM Research Project, Final Presentation, Yonsei University (Seoul, South Korea)</li>
+            <li>2025 IRKOM Research Project, Interim Presentation, Yonsei University (Seoul, South Korea)</li>
+          </ul>
+        </article>
+      </div>
 
       <p class="pnote">† Accepted and scheduled for presentation &nbsp;·&nbsp; * Presented under an earlier title</p>
     </section>
