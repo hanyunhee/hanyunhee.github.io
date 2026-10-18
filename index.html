@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Yunhee Han, M.S. candidate in Management (Organization Theory) at Ewha Womans University, applying to PhD programs in Management for Fall 2027.">
+<style>html,body{margin:0;height:100%}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Yunhee Han</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: Ewha-green identity column on the left (top band on phones), one reading column on the right; pages switch by #home / #research / #cv. */
+:root{
+  --ewha:#00462A; --ewha-ink:#E9F1EC; --ewha-soft:#A9C7B6;
+  --bg:#F8FAF8; --fg:#16211B; --muted:#56675D; --rule:#D7E1DA; --tint:#EAF2ED; --accent:#00663D;
+  --display:"Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --ui:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ewha:#0C3A26;--ewha-ink:#E3EEE7;--ewha-soft:#8FB4A0;
+  --bg:#0F1612;--fg:#E3EAE5;--muted:#9AAEA2;--rule:#26332B;--tint:#17221C;--accent:#6FCB9B;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ewha:#0C3A26;--ewha-ink:#E3EEE7;--ewha-soft:#8FB4A0;
+  --bg:#0F1612;--fg:#E3EAE5;--muted:#9AAEA2;--rule:#26332B;--tint:#17221C;--accent:#6FCB9B;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.shell{display:grid;grid-template-columns:minmax(260px,320px) minmax(0,1fr);min-height:100%}
+.side{background:var(--ewha);color:var(--ewha-ink);position:sticky;top:0;height:100vh;
+  padding-block:36px 28px;padding-left:max(28px, env(safe-area-inset-left,0px));padding-right:28px;
+  display:flex;flex-direction:column;gap:18px;overflow-y:auto}
+.side h1{font-family:var(--display);font-weight:600;font-size:2.3rem;line-height:1;margin:0;letter-spacing:-.005em}
+.photo{width:100%;max-width:min(220px, 26vh);aspect-ratio:1/1;height:auto;display:block;margin-bottom:16px}
+.side .role{font-family:var(--ui);font-size:.82rem;line-height:1.5;color:var(--ewha-soft);margin:10px 0 0}
+.applying{font-family:var(--ui);font-size:.8rem;font-weight:500;line-height:1.4;
+  border:1px solid color-mix(in srgb,var(--ewha-ink) 45%,transparent);border-radius:4px;padding:10px 12px}
+.applying b{display:block;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.68rem;color:var(--ewha-soft);margin-bottom:2px}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-family:var(--ui);font-size:.92rem}
+nav a{color:var(--ewha-ink);text-decoration:none;opacity:.7}
+nav a:hover{opacity:1}
+nav a[aria-current="page"]{opacity:1;font-weight:600}
+.contact{margin-top:auto;font-family:var(--ui);font-size:.8rem;color:var(--ewha-soft);display:flex;flex-direction:column;gap:8px}
+.contact a{color:var(--ewha-ink)}
+.email{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.email span{user-select:all;color:var(--ewha-ink)}
+.email button{font:inherit;font-size:.72rem;background:transparent;color:var(--ewha-ink);border:1px solid color-mix(in srgb,var(--ewha-ink) 40%,transparent);border-radius:3px;padding:2px 8px;cursor:pointer}
+
+main{padding-block:clamp(24px,5vh,48px) 48px;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+.col{max-width:47rem;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+p{margin:0}
+.label{font-family:var(--ui);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.keys{font-family:var(--ui);font-size:.85rem;color:var(--muted)}
+ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
+.statement{font-family:var(--ui);font-size:.92rem;font-weight:500;background:var(--tint);padding:9px 14px;border-radius:4px}
+.addr{user-select:all}
+
+.question{font-family:var(--display);font-weight:600;font-size:1.65rem;line-height:1.35;border-left:3px solid var(--ewha);padding-left:20px;text-wrap:balance}
+.arc{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column}
+.arc li{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:20px;padding-block:22px;border-top:1px solid var(--rule)}
+.arc li:last-child{border-bottom:1px solid var(--rule)}
+.step{font-family:var(--ui);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.step em{display:block;font-style:normal;font-family:var(--display);font-weight:600;font-size:1.3rem;letter-spacing:0;text-transform:none;color:var(--fg);margin-top:4px}
+.arc .src{display:block;font-family:var(--ui);font-size:.76rem;color:var(--muted);margin-top:8px}
+.next{font-size:1rem;color:var(--muted)}
+.next b{font-family:var(--ui);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:4px}
+
+.cvframe{width:100%;height:80vh;border:1px solid var(--rule);background:#fff}
+.cvpage{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--rule);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.cvnote{font-family:var(--ui);font-size:.8rem;color:var(--muted)}
+.cv dl{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:10px 20px;margin:0}
+.cv dt{font-family:var(--ui);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:3px}
+.cv dd{margin:0;font-size:1rem}
+.cv h3{font-family:var(--ui);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin:16px 0 4px}
+
+@media (max-width:820px){
+  .photo{max-width:200px}
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .side{position:static;height:auto;padding-block:36px 28px;
+    padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
+  nav ul{flex-direction:row;gap:18px}
+  .contact{margin-top:0}
+  .arc li,.cv dl{grid-template-columns:minmax(0,1fr);gap:6px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <div>
+      <img class="photo" alt="Portrait of Yunhee Han" src="photo.jpg">
+      <h1>Yunhee<br>Han</h1>
+      <p class="role">M.S. Candidate, Management (Organization Theory)<br>Ewha Womans University</p>
+    </div>
+    <div class="applying"><b>Fall 2027</b>Applying to PhD programs in Management</div>
+    <nav aria-label="Pages"><ul>
+      <li><a href="#home" data-p="home">Home</a></li>
+      <li><a href="#research" data-p="research">Research</a></li>
+      <li><a href="#cv" data-p="cv">CV</a></li>
+    </ul></nav>
+    <div class="contact">
+      <div class="email"><span id="addr">yunheehan@ewha.ac.kr</span><button type="button" id="copy">Copy</button></div>
+      <a href="https://www.linkedin.com/in/yunhee-han-katherine/">LinkedIn</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="col" id="p-home">
+      <p class="keys">Organization Theory | Entrepreneurship | Legitimacy &amp; Categories | Organization Design &amp; Hierarchy</p>
+      <p>After interning at a startup and co-founding Shelfie, a reading-log platform, I turned to research to understand why some startups survive and others do not. Few things are harder to start, or harder to keep alive. With little money and little time, a small choice today can decide whether a company is still standing tomorrow, and many startups end up trading away their core values just to survive. I find that tension fascinating. I study how new ventures hold on to what makes them their own while outside forces push them to change.</p>
+      <p>My current work examines:</p>
+      <ul class="work">
+        <li>how reducing hierarchy can push people apart rather than bring them together, based on 84 in-depth interviews (single-authored);</li>
+        <li>how startups that did nothing wrong lose funding when a large firm in their category faces a scandal, using data on 51,738 U.S. startups (single-authored);</li>
+        <li>how support intermediaries shape which outsider ideas come to be seen as novel (with Eunki Ro and Sang-Joon Kim, submitted to <i>Research Policy</i>);</li>
+        <li>how a social enterprise keeps its core model, triangular mentoring, while changing its form to work with large corporate partners and expand globally (ongoing field study with Boram Do, Sang-Joon Kim, and Sung-Chul Noh).</li>
+      </ul>
+      <p>The first study was presented in two Professional Development Workshops at the 2026 Academy of Management Annual Meeting and at the 2026 <i>JMS</i> Publishing Workshop. The second was selected as a finalist, one of six papers, in the Graduate Student Paper Competition at the 2026 KASBA Fall Conference, with final results announced in November.</p>
+      <p class="statement">I am applying to PhD programs in Management for Fall 2027.</p>
+      <p>I am advised by Sang-Joon Kim at Ewha Womans University, where I also earned my B.B.A.</p>
+    </section>
+
+    <section class="col" id="p-research" hidden>
+      <p class="label">Research</p>
+      <p class="question">How do new ventures hold on to what makes them their own while outside forces push them to change?</p>
+      <p>I follow this question in three moves: what ventures build on the inside, what pushes on them from the outside, and what they choose to keep.</p>
+      <ol class="arc">
+        <li>
+          <div class="step">01<em>Inside</em></div>
+          <div><p>Startups build their own structures, and many flatten hierarchy in the hope of more open, supportive relationships. Studying university students, the community where many founding teams form, I found the opposite. Reducing hierarchy narrowed the distance between seniors and juniors but also weakened ties among peers, because clear roles had given people a legitimate way to ask for help.</p>
+          <span class="src">Dehierarchized but Not Connected · 84 interviews</span></div>
+        </li>
+        <li>
+          <div class="step">02<em>Outside</em></div>
+          <div><p>But ventures do not move on their own. Support intermediaries filter and translate which outsider ideas come to count as novel. Shocks also spread across a category: after Cambridge Analytica, social-platform startups that did nothing wrong became less likely to raise funding, most sharply in wellness and health.</p>
+          <span class="src">Made at the Gate · When Big Firms Stumble, Startups Pay · 51,738 startups</span></div>
+        </li>
+        <li>
+          <div class="step">03<em>Back to the core</em></div>
+          <div><p>Are startups then powerless? Not entirely. Within the same stigmatized category, startups designed to let users control their own exposure were more likely to raise funding. And JUMP, a social enterprise working with large corporations, has kept its triangular mentoring model by changing its form rather than giving it up.</p>
+          <span class="src">When Big Firms Stumble, Startups Pay · JUMP field study</span></div>
+        </li>
+      </ol>
+      <p class="next"><b>Next</b>Who starts ventures in low-hierarchy communities, when reliance on outside support pulls startups off course, and which identities and design choices help ventures withstand category shocks.</p>
+    </section>
+
+    <section class="col cv" id="p-cv" hidden>
+      <p class="label">CV</p>
+      <p>You can download my CV <a href="CV_YunheeHan.pdf" download>here</a>.</p>
+      <p class="cvnote">Last updated October 18, 2026</p>
+      <iframe class="cvframe" src="CV_YunheeHan.pdf" title="CV of Yunhee Han"></iframe>
+    </section>
+  </main>
+</div>
+
+<script>
+function show(){
+  var pages=['home','research','cv'], p=(location.hash||'#home').slice(1);
+  if(pages.indexOf(p)<0) p='home';
+  pages.forEach(function(k){document.getElementById('p-'+k).hidden=(k!==p);});
+  document.querySelectorAll('nav a').forEach(function(a){ if(a.dataset.p===p) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+}
+addEventListener('hashchange',show); show();
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,el=document.getElementById('addr');
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+  try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent='Copied'},sel);}catch(e){sel();}
+  setTimeout(function(){b.textContent='Copy'},1800);
+});
+</script>
+
+</body>
+</html>
