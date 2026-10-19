@@ -26,36 +26,42 @@
   --bg:#0F1612;--fg:#E3EAE5;--muted:#9AAEA2;--rule:#26332B;--tint:#17221C;--accent:#6FCB9B;color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16.5px;line-height:1.55}
 a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 
-.shell{display:grid;grid-template-columns:minmax(260px,320px) minmax(0,1fr);min-height:100%}
+.shell{display:grid;grid-template-columns:minmax(250px,290px) minmax(0,1fr);min-height:100%}
 .side{background:var(--ewha);color:var(--ewha-ink);position:sticky;top:0;height:100vh;
   padding-block:36px 28px;padding-left:max(28px, env(safe-area-inset-left,0px));padding-right:28px;
-  display:flex;flex-direction:column;gap:18px;overflow-y:auto}
+  display:flex;flex-direction:column;gap:14px;overflow-y:auto}
 .side h1{font-family:var(--display);font-weight:600;font-size:2.3rem;line-height:1;margin:0;letter-spacing:-.005em}
-.photo{width:100%;max-width:min(220px, 26vh);aspect-ratio:1/1;height:auto;display:block;margin-bottom:16px}
+.photo{width:100%;max-width:min(220px, 22vh);aspect-ratio:1/1;height:auto;display:block;margin-bottom:16px}
 .side .role{font-family:var(--ui);font-size:.82rem;line-height:1.5;color:var(--ewha-soft);margin:10px 0 0}
 .applying{font-family:var(--ui);font-size:.8rem;font-weight:500;line-height:1.4;
   border:1px solid color-mix(in srgb,var(--ewha-ink) 45%,transparent);border-radius:4px;padding:10px 12px}
 .applying b{display:block;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.68rem;color:var(--ewha-soft);margin-bottom:2px}
-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-family:var(--ui);font-size:.92rem}
-nav a{color:var(--ewha-ink);text-decoration:none;opacity:.7}
-nav a:hover{opacity:1}
-nav a[aria-current="page"]{opacity:1;font-weight:600}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px;font-family:var(--display);font-size:1.25rem;font-weight:600}
+nav a{display:flex;justify-content:space-between;align-items:center;padding:6px 12px;border-radius:4px;color:var(--ewha-ink);text-decoration:none;opacity:.75;border:1px solid transparent}
+nav a::after{content:"\2192";font-family:var(--ui);font-size:.9rem;opacity:0;transition:opacity .15s}
+nav a:hover{opacity:1;border-color:color-mix(in srgb,var(--ewha-ink) 35%,transparent)}
+nav a:hover::after{opacity:1}
+nav a[aria-current="page"]{opacity:1;background:var(--ewha-ink);color:var(--ewha)}
+nav a[aria-current="page"]::after{opacity:1}
 .contact{margin-top:auto;font-family:var(--ui);font-size:.8rem;color:var(--ewha-soft);display:flex;flex-direction:column;gap:8px}
 .contact a{color:var(--ewha-ink)}
 .email{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .email span{user-select:all;color:var(--ewha-ink)}
 .email button{font:inherit;font-size:.72rem;background:transparent;color:var(--ewha-ink);border:1px solid color-mix(in srgb,var(--ewha-ink) 40%,transparent);border-radius:3px;padding:2px 8px;cursor:pointer}
 
-main{padding-block:clamp(24px,5vh,48px) 48px;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
-.col{max-width:47rem;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+main{padding-block:clamp(16px,3.5vh,44px) 40px;padding-left:max(24px, env(safe-area-inset-left,0px));padding-right:max(24px, env(safe-area-inset-right,0px))}
+.col{max-width:56rem;margin:0 auto;display:flex;flex-direction:column;gap:12px}
 p{margin:0}
 .label{font-family:var(--ui);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.keys{font-family:var(--ui);font-size:.85rem;color:var(--muted)}
-ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
+.keys{font-family:var(--ui);font-size:.8rem;font-weight:500;letter-spacing:.02em;color:var(--accent)}
+#p-home b{font-weight:600;color:var(--fg)}
+#p-home .lead{font-size:1.08rem;line-height:1.55}
+ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:4px}
+ul.work li::marker{color:var(--accent)}
 .statement{font-family:var(--ui);font-size:.92rem;font-weight:500;background:var(--tint);padding:9px 14px;border-radius:4px}
 .addr{user-select:all}
 
@@ -105,7 +111,9 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
   .shell{grid-template-columns:minmax(0,1fr)}
   .side{position:static;height:auto;padding-block:36px 28px;
     padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
-  nav ul{flex-direction:row;gap:18px}
+  nav ul{flex-direction:row;gap:6px;font-size:1.1rem}
+  nav a{padding:6px 12px}
+  nav a::after{display:none}
   .contact{margin-top:0}
   .arc li,.cv dl{grid-template-columns:minmax(0,1fr);gap:6px}
 }
@@ -134,7 +142,7 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
   <main>
     <section class="col" id="p-home">
       <p class="keys">Organization Theory | Entrepreneurship | Legitimacy &amp; Categories | Organization Design &amp; Hierarchy</p>
-      <p>After interning at a startup and co-founding Shelfie, a reading-log platform, I turned to research to understand why some startups survive and others do not. Few things are harder to start, or harder to keep alive. With little money and little time, a small choice today can decide whether a company is still standing tomorrow, and many startups end up trading away their core values just to survive. I find that tension fascinating. I study how new ventures hold on to what makes them their own while outside forces push them to change.</p>
+      <p class="lead">After interning at a startup and co-founding Shelfie, a reading-log platform, I turned to research to understand why some startups survive and others do not. Few things are harder to start, or harder to keep alive. With little money and little time, a small choice today can decide whether a company is still standing tomorrow, and many startups end up trading away their core values just to survive. I find that tension fascinating. I study how new ventures hold on to what makes them their own while outside forces push them to change.</p>
       <p>My current work examines:</p>
       <ul class="work">
         <li>how reducing hierarchy can push people apart rather than bring them together, based on 84 in-depth interviews (single-authored);</li>
@@ -142,7 +150,7 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
         <li>how support intermediaries shape which outsider ideas come to be seen as novel (with Eunki Ro and Sang-Joon Kim, submitted to <b><i>Research Policy</i></b>);</li>
         <li>how a social enterprise keeps its core model, triangular mentoring, while changing its form to work with large corporate partners and expand globally (ongoing field study with Boram Do, Sang-Joon Kim, and Sung-Chul Noh).</li>
       </ul>
-      <p>The first study was presented in two Professional Development Workshops at the <b>2026 Academy of Management Annual Meeting</b> and at the <b>2026 <i>JMS</i> Publishing Workshop</b>. The second was selected as a finalist, one of six papers, in the Graduate Student Paper Competition at the <b>2026 KASBA Fall Conference</b>, with final results announced in November.</p>
+      <p>The first study was presented in two Professional Development Workshops at the <b>2026 Academy of Management Annual Meeting</b> and at the <b>2026 <i>JMS</i> Publishing Workshop</b>. The second received the <b>Outstanding Paper Award, one of six papers, in the Graduate Student Paper Competition</b> at the 2026 KASBA Fall Conference.</p>
       <p class="statement">I am applying to PhD programs in Management for Fall 2027.</p>
       <p>I am advised by Sang-Joon Kim at Ewha Womans University, where I also earned my B.B.A.</p>
     </section>
@@ -161,7 +169,7 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
 
       <div class="stage">
         <p class="stg"><span>01</span> Inside</p>
-        <p class="sint">Startups build their own structures, and many flatten hierarchy in the hope of more open, supportive relationships.</p>
+        <p class="sint">Startups reshape themselves to grow, flattening hierarchies and inventing new ways of working in the belief that the right structure will carry them forward. But do the structures they choose for themselves actually make them stronger?</p>
         <article class="pp">
           <p class="pstat">Working Paper</p>
           <h3>Dehierarchized but Not Connected: The Decoupling of Vertical and Lateral Governance</h3>
@@ -180,7 +188,7 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
 
       <div class="stage">
         <p class="stg"><span>02</span> Outside</p>
-        <p class="sint">But ventures do not move on their own. Shocks spread across their category, and support organizations shape what counts as new.</p>
+        <p class="sint">Look closer, and much of that newness is borrowed, shaped to look legitimate in the eyes of others. And whatever is built to please the outside is ruled by it too, so startups sway with every gust, from fleeting trends to shocks they never saw coming.</p>
         <article class="pp">
           <p class="pstat">Working Paper</p>
           <h3>When Big Firms Stumble, Startups Pay: Category Spillover and Startup Responses</h3>
@@ -188,7 +196,7 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
           <p>Using Facebook's 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest in wellness and health, closest to the scandal's privacy concerns, and among startups evaluated after the event.</p>
           <p class="plab">Awards</p>
           <ul>
-            <li>Finalist (1 of 6 shortlisted papers), Graduate Student Paper Competition, 2026 KASBA Fall Conference (final results announced Nov. 2026)</li>
+            <li>Outstanding Paper Award (1 of 6 papers), Graduate Student Paper Competition, 2026 KASBA Fall Conference</li>
           </ul>
           <p class="plab">Presentations</p>
           <ul>
@@ -211,7 +219,7 @@ ul.work{margin:0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
 
       <div class="stage">
         <p class="stg"><span>03</span> Back to the core</p>
-        <p class="sint">Are startups then powerless? Not entirely. In <i>When Big Firms Stumble</i>, startups designed to let users control their own exposure were more likely to raise funding despite the category stigma.</p>
+        <p class="sint">So are startups powerless? Not quite. Conforming may keep them alive, but what keeps them themselves is the core they refuse to trade away, even as its form keeps changing.</p>
         <article class="pp">
           <p class="pstat">Work in Progress</p>
           <h3>Glocalization Strategy of a Korean Social Venture</h3>
