@@ -87,18 +87,16 @@ ul.work li::marker{color:var(--accent)}
 .flow .node span:last-child{font-family:var(--ui);font-size:.74rem;color:var(--muted)}
 .flow .arw{flex:0 0 18px;align-self:center;height:1px;background:var(--muted);position:relative}
 .flow .arw::after{content:"";position:absolute;right:-1px;top:-4px;border-left:6px solid var(--muted);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
-.map{display:flex;flex-direction:column;margin:8px 0 4px;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
-.map .mh,.map .mr{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr)}
-.map .mh span{font-family:var(--ui);font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:10px 16px;border-bottom:1px solid var(--rule)}
-.map .mh span:first-child{background:var(--ewha);color:var(--ewha-soft)}
-.map .mr{color:var(--fg);text-decoration:none;border-bottom:1px solid var(--rule)}
-.map .mr:last-child{border-bottom:0}
-.map .mr b{font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.2;padding:14px 16px;background:var(--ewha);color:var(--ewha-ink);border-bottom:1px solid color-mix(in srgb,var(--ewha-ink) 18%,transparent)}
-.map .mr:last-child b{border-bottom:0}
-.map .mr>span{font-size:.95rem;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
-.map .mr em{font-style:normal;font-family:var(--ui);font-size:.74rem;color:var(--accent)}
-.map .mr:hover>span{background:var(--tint)}
-@media (max-width:640px){.map .mh{display:none}.map .mr{grid-template-columns:minmax(0,1fr)}.map .mr b{border-bottom:0}}
+.ideals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:10px 0 4px}
+.ideal{display:flex;flex-direction:column;gap:10px;padding:18px 18px 16px;border:1px solid var(--rule);border-top:3px solid var(--ewha);border-radius:4px;background:var(--bg);color:var(--fg);text-decoration:none}
+.ideal:hover{border-color:var(--accent);border-top-color:var(--ewha)}
+.ideal .k{font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ideal h3{font-family:var(--display);font-weight:600;font-size:1.4rem;line-height:1.15;margin:0}
+.ideal .belief{font-style:italic;color:var(--muted);font-size:.95rem;line-height:1.45}
+.ideal .find{font-size:.95rem;line-height:1.5;padding-top:10px;border-top:1px solid var(--rule)}
+.ideal .gap{font-family:var(--ui);font-size:.84rem;font-weight:500;line-height:1.45;background:var(--tint);border-left:3px solid var(--accent);padding:9px 12px;border-radius:0 3px 3px 0}
+.ideal .src{margin-top:auto;font-family:var(--ui);font-size:.74rem;color:var(--accent)}
+@media (max-width:1100px){.ideals{grid-template-columns:minmax(0,1fr)}}
 .stage{display:flex;flex-direction:column;gap:6px;margin-top:22px}
 .stg{font-family:var(--display);font-weight:600;font-size:1.45rem;line-height:1.2;color:var(--fg)}
 .stg span{font-family:var(--ui);font-size:.75rem;font-weight:600;letter-spacing:.08em;color:var(--accent);margin-right:6px;vertical-align:middle}
@@ -172,21 +170,41 @@ ul.work li::marker{color:var(--accent)}
       <p class="label">Research</p>
       <p class="question">What does it mean to be a startup, and why do new ventures work so hard to look like one?</p>
 
-      <div class="map" aria-label="Research map">
-        <div class="mh"><span>The ideal startup</span><span>What my research finds</span></div>
-        <a class="mr" href="#r-flat"><b>A flat organization</b><span>Removing titles shortens vertical distance but weakens lateral ties, so looking flat does not deliver what flattening promised.<em>Dehierarchized but Not Connected</em></span></a>
-        <a class="mr" href="#r-new"><b>A self-made innovator</b><span>Novelty is shaped by intermediaries and borrowed from categories, and that borrowed legitimacy cuts both ways.<em>Made at the Gate · When Big Firms Stumble</em></span></a>
-        <a class="mr" href="#r-core"><b>Beneath the image</b><span>Some ventures change their form to meet others’ expectations while holding on to the core that makes them their own.<em>Glocalization Strategy of a Korean Social Venture</em></span></a>
+      <div class="ideals" aria-label="Research map">
+        <a class="ideal" href="#r-flat">
+          <span class="k">The ideal</span>
+          <h3>The decentralized organization</h3>
+          <p class="belief">Remove the ranks, and people will approach one another and collaborate freely.</p>
+          <p class="find"><span class="k">What I find</span><br>Practices that erased seniority cues freed members from hierarchical pressure, but did not connect them. The labels that had produced hierarchy had also been the routes through which people approached one another.</p>
+          <p class="gap">Vertical dehierarchization and lateral horizontalization are decoupled: an organization can become less hierarchical without becoming more connected.</p>
+          <span class="src">Dehierarchized but Not Connected</span>
+        </a>
+        <a class="ideal" href="#r-gate">
+          <span class="k">The ideal</span>
+          <h3>The original innovator</h3>
+          <p class="belief">A venture’s novelty comes from its founders’ own idea, carried forward on its own strength.</p>
+          <p class="find"><span class="k">What I find</span><br>Outsider ventures enter the ecosystem through support intermediaries that screen and translate their ideas. The gate a venture passes through shapes how it defines itself and what comes to count as its novelty.</p>
+          <p class="gap">Novelty is not the venture’s alone; it is made at the gate, together with the intermediaries that grant legitimacy.</p>
+          <span class="src">Made at the Gate</span>
+        </a>
+        <a class="ideal" href="#r-cat">
+          <span class="k">The ideal</span>
+          <h3>The credible newcomer</h3>
+          <p class="belief">Joining a recognized category lends a young venture the legitimacy it lacks on its own.</p>
+          <p class="find"><span class="k">What I find</span><br>After the Cambridge Analytica scandal, uninvolved social-platform startups became less likely to raise funding, by about 15 points for personal record services, while content-sharing services closer to Facebook’s business saw no penalty. Startups that let users control their own exposure raised funding more often.</p>
+          <p class="gap">The category that lends legitimacy also passes on stigma, and the penalty follows potential harm, not resemblance to the offender.</p>
+          <span class="src">When Big Firms Stumble, Startups Pay</span>
+        </a>
       </div>
 
       <div class="stage" id="r-flat">
-        <p class="stg">A flat organization</p>
-        <p class="sint">Startups prize flatness. Job titles give way to nicknames in the hope of freer communication and more new ideas. But does looking flat make an organization flat, and does it deliver what flattening promised?</p>
+        <p class="stg">The decentralized organization</p>
+        <p class="sint">Startups adopt nicknames in place of titles and promise flat, decentralized structures, expecting freer communication and more new ideas. Does removing hierarchy deliver the connection it promises?</p>
         <article class="pp">
           <p class="pstat">Working Paper</p>
           <h3>Dehierarchized but Not Connected: The Decoupling of Vertical and Lateral Governance</h3>
           <p class="pau"><b>Han, Y.</b></p>
-          <p>Drawing on 84 in-depth interviews with university students analyzed with the Gioia method, this paper shows that reducing hierarchy narrows vertical distance but also weakens lateral ties. Clear senior–junior roles had given people a legitimate script for asking peers for help; without them, people knew each other less and held back.</p>
+          <p>Drawing on 84 interviews with members of peer communities at six Korean universities that deliberately weakened the senior–junior order, this paper shows that flattening can succeed as vertical dehierarchization while failing as lateral horizontalization. A shared form of address and not asking about age or class year relieved hierarchical pressure, but gave members no script for approaching one another; trying to be considerate, they became more cautious about asking for help and starting relationships.</p>
           <p class="plab">Presentations</p>
           <ul>
             <li>2026 Academy of Management Annual Meeting, PDW: Decentralization in Organizations (Philadelphia, US)</li>
@@ -198,9 +216,9 @@ ul.work li::marker{color:var(--accent)}
         </article>
       </div>
 
-      <div class="stage" id="r-new">
-        <p class="stg">A self-made innovator</p>
-        <p class="sint">Startups present themselves as original pioneers pushing their own ideas forward. Yet much of their newness is shaped by others: by intermediaries that decide which ideas count as novel, and by the categories startups join to borrow legitimacy.</p>
+      <div class="stage" id="r-gate">
+        <p class="stg">The original innovator</p>
+        <p class="sint">Startups present themselves as original pioneers pushing their own ideas forward. Where does their novelty actually come from?</p>
         <article class="pp">
           <p class="pstat">Under Review</p>
           <h3>Made at the Gate: How Support Intermediaries Constitute Outsider Innovation in Social Entrepreneurship</h3>
@@ -212,11 +230,16 @@ ul.work li::marker{color:var(--accent)}
             <li>2026 The Korean Society of Business Venturing and Entrepreneurship Spring Conference (South Korea)*</li>
           </ul>
         </article>
+      </div>
+
+      <div class="stage" id="r-cat">
+        <p class="stg">The credible newcomer</p>
+        <p class="sint">Startups attach themselves to promising categories to borrow the legitimacy they lack. What happens when that category is shaken?</p>
         <article class="pp">
           <p class="pstat">Working Paper</p>
           <h3>When Big Firms Stumble, Startups Pay: Category Spillover and Startup Responses</h3>
           <p class="pau"><b>Han, Y.</b>, &amp; Kim, S.-J.</p>
-          <p>Using Facebook's 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, with regression analysis in Stata, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest in wellness and health, closest to the scandal's privacy concerns, and among startups evaluated after the event.</p>
+          <p>Using the 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest for personal record services, where users log sensitive information for their own use, and disappeared for content-sharing services, which overlap more with Facebook’s business. Startups that stated that users can control their own exposure were more likely to raise funding.</p>
           <p class="plink"><a href="papers/Han_Kim_When_Big_Firms_Stumble_Startups_Pay.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a> · <a href="papers/Han_Kim_When_Big_Firms_Stumble_Startups_Pay_slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a></p>
           <p class="plab">Awards</p>
           <ul>
@@ -231,8 +254,8 @@ ul.work li::marker{color:var(--accent)}
       </div>
 
       <div class="stage" id="r-core">
-        <p class="stg">Beneath the image</p>
-        <p class="sint">If the ideal startup is partly an image, what lies beneath it? Some ventures keep changing their form to fit what partners and funders expect, while holding on to the core that makes them who they are.</p>
+        <p class="stg">Beyond the ideal</p>
+        <p class="sint">My studies show where the ideal startup and real ventures part ways. I now ask what the ideal is, how it is built and spread, and when living up to it helps a venture and when it hurts. I plan to trace the ideal in the language of founders, investors, and intermediaries, and test its consequences with large-scale venture data. One place I am looking is ventures that change their form to meet others’ expectations while keeping the core that makes them their own.</p>
         <article class="pp">
           <p class="pstat">Work in Progress</p>
           <h3>Glocalization Strategy of a Korean Social Venture</h3>
@@ -244,14 +267,6 @@ ul.work li::marker{color:var(--accent)}
             <li>2025 IRKOM Research Project, Interim Presentation, Yonsei University (Seoul, South Korea)</li>
           </ul>
         </article>
-      </div>
-
-      <div class="stage">
-        <p class="next"><b>Where I am going</b>Across these studies, what ventures show the world often differs from what keeps them alive. I want to ask what the ideal of a “startup” is that ventures conform to, how it is built, and when conforming to it helps a venture and when it costs the venture its core. I plan to trace this ideal in the language of founders, investors, and intermediaries, and then test its consequences with large-scale venture data.</p>
-      </div>
-
-      <div class="stage">
-        <p class="next"><b>Where I am going</b>My studies point to a gap between the startup that ventures try to look like and the one they are. Two questions remain open. What is the ideal of the startup, and how is it built and spread? And when does living up to it help a venture, and when does it hurt? I plan to trace this ideal in the language of founders, investors, and intermediaries, and then test its consequences with large-scale venture data.</p>
       </div>
 
       <p class="pnote">† Accepted and scheduled for presentation &nbsp;·&nbsp; * Presented under an earlier title</p>
