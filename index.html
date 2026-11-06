@@ -94,9 +94,13 @@ ul.work li::marker{color:var(--accent)}
 .sv .up{padding:10px 20px 20px;background:var(--bg)}
 .sv .down{padding:18px 20px 20px;background:var(--ewha);color:var(--ewha-ink);position:relative}
 .sv .down::before{content:"";position:absolute;left:0;right:0;top:-1px;border-top:2px dashed color-mix(in srgb,var(--ewha-ink) 55%,transparent)}
+.sv .down{padding-top:30px}
+.sv .down::after{content:"\2193  beneath the surface";position:absolute;left:50%;top:0;transform:translate(-50%,-50%);font-family:var(--ui);font-size:.62rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;padding:4px 10px;border-radius:999px;background:var(--bg);color:var(--accent);border:1px solid var(--accent)}
+.sv .up{background:repeating-linear-gradient(135deg,var(--bg) 0 9px,var(--tint) 9px 10px)}
 .sv .t{display:block;font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
 .sv .up .t{color:var(--muted)}
 .sv .down .t{color:var(--ewha-soft)}
+.sv .t{font-size:.7rem}
 .sv .up p{font-family:var(--display);font-style:italic;font-size:1.2rem;line-height:1.35;color:var(--muted)}
 .sv .down p{font-size:.97rem;line-height:1.5}
 .sv .down p b{display:block;font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.3;margin-bottom:4px}
@@ -178,13 +182,13 @@ ul.work li::marker{color:var(--accent)}
       <div class="sv" aria-label="Research map: how startups look versus what I find">
         <a class="col2" href="#r-flat">
           <h3>Decentralized</h3>
-          <div class="up"><span class="t">How it looks</span><p>“Without ranks, we connect more freely.”</p></div>
-          <div class="down"><span class="t">What I find</span><p><b>Without ranks, they connect less.</b> The ranks were also the routes for reaching out; once they are gone, people hold back.</p><span class="src">Dehierarchized but Not Connected</span></div>
+          <div class="up"><span class="t">On the surface</span><p>“Without ranks, we connect more freely.”</p></div>
+          <div class="down"><span class="t">In reality</span><p><b>Without ranks, they connect less.</b> The ranks were also the routes for reaching out; once they are gone, people hold back.</p><span class="src">Dehierarchized but Not Connected</span></div>
         </a>
         <a class="col2" href="#r-new">
           <h3>Innovative</h3>
-          <div class="up"><span class="t">How it looks</span><p>“Our novelty is our own.”</p></div>
-          <div class="down"><span class="t">What I find</span><p><b>Their novelty is not theirs alone.</b> Support intermediaries shape what counts as new, and startups depend heavily on the categories they belong to.</p><span class="src">Made at the Gate · When Big Firms Stumble, Startups Pay</span></div>
+          <div class="up"><span class="t">On the surface</span><p>“Our novelty is our own.”</p></div>
+          <div class="down"><span class="t">In reality</span><p><b>Their novelty is not theirs alone.</b> Support intermediaries shape what counts as new, and startups depend heavily on the categories they belong to.</p><span class="src">Made at the Gate · When Big Firms Stumble, Startups Pay</span></div>
         </a>
       </div>
 
