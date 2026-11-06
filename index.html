@@ -87,20 +87,20 @@ ul.work li::marker{color:var(--accent)}
 .flow .node span:last-child{font-family:var(--ui);font-size:.74rem;color:var(--muted)}
 .flow .arw{flex:0 0 18px;align-self:center;height:1px;background:var(--muted);position:relative}
 .flow .arw::after{content:"";position:absolute;right:-1px;top:-4px;border-left:6px solid var(--muted);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
-.sv{display:grid;grid-template-columns:7.5rem minmax(0,1fr) minmax(0,1fr);column-gap:28px;margin:10px 0 4px}
-.sv .hd{font-family:var(--display);font-weight:600;font-size:1.45rem;line-height:1.15;padding-bottom:8px}
-.sv .hd a{color:var(--fg);text-decoration:none}.sv .hd a:hover{color:var(--accent)}
-.sv .rl{font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:4px}
-.sv .top{font-size:.97rem;line-height:1.5;padding:4px 0 18px}
-.sv .line{grid-column:1/-1;display:flex;align-items:center;gap:10px;font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.sv .line::after{content:"";flex:1;border-top:1px dashed var(--muted)}
-.sv .bot{font-size:.97rem;line-height:1.5;padding:18px 0 4px}
-.sv .src{font-family:var(--ui);font-size:.74rem;color:var(--accent);padding-top:8px}
-.sv .rl.r2{padding-top:22px}
-@media (max-width:760px){.sv{grid-template-columns:minmax(0,1fr)}.sv .rl,.sv .line,.sv .sp{display:none}
-  .sv .top::before,.sv .bot::before{display:block;font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-  .sv .top::before{content:"How it looks"}.sv .bot::before{content:"What I find";padding-top:10px;border-top:1px dashed var(--muted);padding-top:10px}
-  .sv .d1{order:1}.sv .d2{order:2}.sv .d3{order:3}.sv .d4{order:4}.sv .i1{order:5}.sv .i2{order:6}.sv .i3{order:7}.sv .i4{order:8}.sv .i1{margin-top:22px}}
+.sv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:0 16px;margin:12px 0 4px}
+.sv .col2{display:grid;grid-row:span 3;grid-template-rows:subgrid;border:1px solid var(--rule);border-radius:6px;overflow:hidden;color:inherit;text-decoration:none}
+.sv .col2:hover{border-color:var(--accent)}
+.sv h3{margin:0;padding:18px 20px 0;font-family:var(--display);font-weight:600;font-size:1.6rem;line-height:1.1;color:var(--fg);background:var(--bg)}
+.sv .up{padding:10px 20px 20px;background:var(--bg)}
+.sv .down{padding:18px 20px 20px;background:var(--ewha);color:var(--ewha-ink);position:relative}
+.sv .down::before{content:"";position:absolute;left:0;right:0;top:-1px;border-top:2px dashed color-mix(in srgb,var(--ewha-ink) 55%,transparent)}
+.sv .t{display:block;font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.sv .up .t{color:var(--muted)}
+.sv .down .t{color:var(--ewha-soft)}
+.sv .up p{font-family:var(--display);font-style:italic;font-size:1.2rem;line-height:1.35;color:var(--muted)}
+.sv .down p{font-size:.97rem;line-height:1.5}
+.sv .src{display:block;margin-top:10px;font-family:var(--ui);font-size:.74rem;color:var(--ewha-soft)}
+@media (max-width:760px){.sv{grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:14px}.sv .col2{grid-row:auto;grid-template-rows:auto}}
 .stage{display:flex;flex-direction:column;gap:6px;margin-top:22px}
 .stg{font-family:var(--display);font-weight:600;font-size:1.45rem;line-height:1.2;color:var(--fg)}
 .stg span{font-family:var(--ui);font-size:.75rem;font-weight:600;letter-spacing:.08em;color:var(--accent);margin-right:6px;vertical-align:middle}
@@ -172,19 +172,19 @@ ul.work li::marker{color:var(--accent)}
 
     <section class="col" id="p-research" hidden>
       <p class="label">Research</p>
-      <p class="question">Why do startups chase an idealized image of the startup,<br>and what does that pursuit actually do to them?</p>
+      <p class="question">What makes a startup a “startup”?<br>Why do new ventures chase that ideal, and what does it do to them?</p>
 
       <div class="sv" aria-label="Research map: how startups look versus what I find">
-        <span class="sp"></span>
-        <p class="hd d1"><a href="#r-flat">Decentralized</a></p>
-        <p class="hd i1"><a href="#r-new">Innovative</a></p>
-        <span class="rl">How it looks</span>
-        <p class="top d2">No ranks, so everyone speaks up, ideas flow freely, and the team moves fast.</p>
-        <p class="top i2">A pioneer pushing an idea of its own that no one else has.</p>
-        <span class="line">Beneath the surface</span>
-        <span class="rl r2">What I find</span>
-        <p class="bot d3">The ranks disappear, and so do the routes for reaching out. People become less pressured, but not more connected.<span class="src" style="display:block">Dehierarchized but Not Connected</span></p>
-        <p class="bot i3">Novelty is shaped at the gates of support organizations, and the legitimacy a category lends also carries other firms’ scandals.<span class="src" style="display:block">Made at the Gate · When Big Firms Stumble, Startups Pay</span></p>
+        <a class="col2" href="#r-flat">
+          <h3>Decentralized</h3>
+          <div class="up"><span class="t">How it looks</span><p>“No ranks here. Everyone speaks up, ideas flow freely, and we move fast.”</p></div>
+          <div class="down"><span class="t">What I find</span><p>The ranks disappear, and so do the routes for reaching out. People become less pressured, but not more connected.</p><span class="src">Dehierarchized but Not Connected</span></div>
+        </a>
+        <a class="col2" href="#r-new">
+          <h3>Innovative</h3>
+          <div class="up"><span class="t">How it looks</span><p>“We are pioneers, pushing an idea of our own that no one else has.”</p></div>
+          <div class="down"><span class="t">What I find</span><p>Novelty is shaped at the gates of support organizations, and the legitimacy a category lends also carries other firms’ scandals.</p><span class="src">Made at the Gate · When Big Firms Stumble, Startups Pay</span></div>
+        </a>
       </div>
 
       <div class="stage" id="r-flat">
