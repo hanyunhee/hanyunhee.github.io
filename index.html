@@ -65,7 +65,7 @@ ul.work li::marker{color:var(--accent)}
 .statement{font-family:var(--ui);font-size:.92rem;font-weight:500;background:var(--tint);padding:9px 14px;border-radius:4px}
 .addr{user-select:all}
 
-.question{font-family:var(--display);font-weight:600;font-size:1.65rem;line-height:1.35;border-left:3px solid var(--ewha);padding-left:20px;text-wrap:balance}
+.question{font-family:var(--display);font-weight:600;font-size:1.65rem;line-height:1.35;border-left:3px solid var(--ewha);padding-left:20px}
 .arc{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column}
 .arc li{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:20px;padding-block:22px;border-top:1px solid var(--rule)}
 .arc li:last-child{border-bottom:1px solid var(--rule)}
@@ -87,6 +87,23 @@ ul.work li::marker{color:var(--accent)}
 .flow .node span:last-child{font-family:var(--ui);font-size:.74rem;color:var(--muted)}
 .flow .arw{flex:0 0 18px;align-self:center;height:1px;background:var(--muted);position:relative}
 .flow .arw::after{content:"";position:absolute;right:-1px;top:-4px;border-left:6px solid var(--muted);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.sv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:0 16px;margin:12px 0 4px}
+.sv .col2{display:grid;grid-row:span 3;grid-template-rows:subgrid;border:1px solid var(--rule);border-radius:6px;overflow:hidden;color:inherit;text-decoration:none}
+.sv .col2:hover{border-color:var(--accent)}
+.sv h3{margin:0;padding:18px 20px 0;font-family:var(--display);font-weight:600;font-size:1.6rem;line-height:1.1;color:var(--fg);background:var(--bg)}
+.sv .up{padding:10px 20px 20px;background:var(--bg)}
+.sv .down{padding:18px 20px 20px;background:var(--ewha);color:var(--ewha-ink);position:relative}
+.sv .down::before{content:"";position:absolute;left:0;right:0;top:-1px;border-top:2px dashed color-mix(in srgb,var(--ewha-ink) 55%,transparent)}
+.sv .up{background:repeating-linear-gradient(135deg,var(--bg) 0 9px,var(--tint) 9px 10px)}
+.sv .t{display:block;font-family:var(--ui);font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.sv .up .t{color:var(--muted)}
+.sv .down .t{color:var(--ewha-soft)}
+.sv .t{font-size:.7rem}
+.sv .up p{font-family:var(--display);font-style:italic;font-size:1.2rem;line-height:1.35;color:var(--muted)}
+.sv .down p{font-size:.97rem;line-height:1.5}
+.sv .down p b{display:block;font-family:var(--display);font-weight:600;font-size:1.25rem;line-height:1.3;margin-bottom:4px}
+.sv .src{display:block;margin-top:10px;font-family:var(--ui);font-size:.74rem;color:var(--ewha-soft)}
+@media (max-width:760px){.sv{grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:14px}.sv .col2{grid-row:auto;grid-template-rows:auto}}
 .stage{display:flex;flex-direction:column;gap:6px;margin-top:22px}
 .stg{font-family:var(--display);font-weight:600;font-size:1.45rem;line-height:1.2;color:var(--fg)}
 .stg span{font-family:var(--ui);font-size:.75rem;font-weight:600;letter-spacing:.08em;color:var(--accent);margin-right:6px;vertical-align:middle}
@@ -143,12 +160,12 @@ ul.work li::marker{color:var(--accent)}
   <main>
     <section class="col" id="p-home">
       <p class="keys">Organization Theory | Entrepreneurship | Legitimacy &amp; Categories | Organization Design &amp; Hierarchy | Networks</p>
-      <p class="lead">After interning at a startup and co-founding Shelfie, a reading-log platform, I turned to research to understand why some startups survive and others do not. Few things are harder to start, or harder to keep alive. With little money and little time, a small choice today can decide whether a company is still standing tomorrow, and many startups end up trading away their core values just to survive. I find that tension fascinating. I study how new ventures hold on to what makes them their own while outside forces push them to change.</p>
+      <p class="lead">I study entrepreneurship through the lens of organization theory. As an undergraduate I co-founded Shelfie, a reading-log platform, and interned at a startup to learn how startups are supposed to work. What I saw instead were startups, mine included, working hard to look like startups: titles traded for nicknames overnight, and companies down the hall rebranding themselves as AI startups. My research asks why new ventures chase this idealized image of the startup, where the practices behind it come from, and what they actually do for the ventures that adopt them.</p>
       <p>My current work examines:</p>
       <ul class="work">
+        <li>how reducing hierarchy can push people apart rather than bring them together, based on 84 in-depth interviews (single-authored);</li>
         <li>how support intermediaries shape which outsider ideas come to be seen as novel (with Prof. Eunki Ro and Prof. Sang-Joon Kim, under review at <b><i>Research Policy</i></b>);</li>
         <li>how startups that did nothing wrong lose funding when a large firm in their category faces a scandal, using regression analysis in Stata on data covering 51,738 U.S. startups (single-authored);</li>
-        <li>how reducing hierarchy can push people apart rather than bring them together, based on 84 in-depth interviews (single-authored);</li>
         <li>how a social enterprise keeps its core model, triangular mentoring, while changing its form to work with large corporate partners and expand globally (ongoing field study with Prof. Boram Do, Prof. Sang-Joon Kim, and Prof. Sung-Chul Noh).</li>
       </ul>
       <p>The study on scandal spillover was named <b>a finalist (1 of 6 shortlisted papers) in the Graduate Student Paper Competition</b> at the 2026 KASBA Fall Conference, with final results to be announced in November. The study on hierarchy was presented in two Professional Development Workshops at the <b>2026 Academy of Management Annual Meeting</b> and at the <b>2026 <i>JMS</i> Publishing Workshop</b>.</p>
@@ -158,24 +175,29 @@ ul.work li::marker{color:var(--accent)}
 
     <section class="col" id="p-research" hidden>
       <p class="label">Research</p>
-      <p class="question">How do new ventures hold on to what makes them their own while outside forces push them to change?</p>
+      <p class="question">What makes a startup a “startup”?<br>Why do new ventures chase that ideal, and what does it do to them?</p>
 
-      <div class="flow" aria-label="Research flow">
-        <div class="node"><span class="n">01</span><b>Inside</b><span>What ventures build</span></div>
-        <span class="arw" aria-hidden="true"></span>
-        <div class="node"><span class="n">02</span><b>Outside</b><span>What pushes on them</span></div>
-        <span class="arw" aria-hidden="true"></span>
-        <div class="node"><span class="n">03</span><b>Back to the core</b><span>What they choose to keep</span></div>
+      <div class="sv" aria-label="Research map: how startups look versus what I find">
+        <a class="col2" href="#r-flat">
+          <h3>Decentralized</h3>
+          <div class="up"><span class="t">On the surface</span><p>“Without ranks, we connect more freely.”</p></div>
+          <div class="down"><span class="t">In reality</span><p><b>Without ranks, they connect less.</b> The ranks were also the routes for reaching out; once they are gone, people hold back.</p><span class="src">Dehierarchized but Not Connected</span></div>
+        </a>
+        <a class="col2" href="#r-new">
+          <h3>Innovative</h3>
+          <div class="up"><span class="t">On the surface</span><p>“Our novelty is our own.”</p></div>
+          <div class="down"><span class="t">In reality</span><p><b>Their novelty is not theirs alone.</b> Support intermediaries shape what counts as new, and startups depend heavily on the categories they belong to.</p><span class="src">Made at the Gate · When Big Firms Stumble, Startups Pay</span></div>
+        </a>
       </div>
 
-      <div class="stage">
-        <p class="stg"><span>01</span> Inside</p>
-        <p class="sint">Startups reshape themselves to grow, flattening hierarchies and inventing new ways of working in the belief that the right structure will carry them forward. But do the structures they choose for themselves actually make them stronger?</p>
+      <div class="stage" id="r-flat">
+        <p class="stg">Decentralized</p>
+        <p class="sint">Startups trade titles for nicknames to look flat and fast. Does removing ranks actually bring people together?</p>
         <article class="pp">
           <p class="pstat">Working Paper</p>
           <h3>Dehierarchized but Not Connected: The Decoupling of Vertical and Lateral Governance</h3>
           <p class="pau"><b>Han, Y.</b></p>
-          <p>Drawing on 84 in-depth interviews with university students analyzed with the Gioia method, this paper shows that reducing hierarchy narrows vertical distance but also weakens lateral ties. Clear senior–junior roles had given people a legitimate script for asking peers for help; without them, people knew each other less and held back.</p>
+          <p>Drawing on 84 interviews with members of peer communities at six Korean universities that deliberately weakened the senior–junior order, this paper shows that flattening can succeed as vertical dehierarchization while failing as lateral horizontalization. A shared form of address and not asking about age or class year relieved hierarchical pressure, but gave members no script for approaching one another; trying to be considerate, they became more cautious about asking for help and starting relationships.</p>
           <p class="plab">Presentations</p>
           <ul>
             <li>2026 Academy of Management Annual Meeting, PDW: Decentralization in Organizations (Philadelphia, US)</li>
@@ -187,25 +209,9 @@ ul.work li::marker{color:var(--accent)}
         </article>
       </div>
 
-      <div class="stage">
-        <p class="stg"><span>02</span> Outside</p>
-        <p class="sint">Look closer, and much of that newness is borrowed, shaped to look legitimate in the eyes of others. And whatever is built to please the outside is ruled by it too, so startups sway with every gust, from fleeting trends to shocks they never saw coming.</p>
-        <article class="pp">
-          <p class="pstat">Working Paper</p>
-          <h3>When Big Firms Stumble, Startups Pay: Category Spillover and Startup Responses</h3>
-          <p class="pau"><b>Han, Y.</b>, &amp; Kim, S.-J.</p>
-          <p>Using Facebook's 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, with regression analysis in Stata, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest in wellness and health, closest to the scandal's privacy concerns, and among startups evaluated after the event.</p>
-          <p class="plink"><a href="papers/Han_Kim_When_Big_Firms_Stumble_Startups_Pay.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a> · <a href="papers/Han_Kim_When_Big_Firms_Stumble_Startups_Pay_slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a></p>
-          <p class="plab">Awards</p>
-          <ul>
-            <li>Finalist (1 of 6 shortlisted papers), Graduate Student Paper Competition, 2026 KASBA Fall Conference (final results announced Nov. 2026)</li>
-          </ul>
-          <p class="plab">Presentations</p>
-          <ul>
-            <li>2026 Korean Academy of Management Fall Conference (South Korea)†</li>
-            <li>2026 The Korean Academic Society of Business Administration (KASBA) Fall Conference, Graduate Student Paper Competition, Finalist (South Korea)*†</li>
-          </ul>
-        </article>
+      <div class="stage" id="r-new">
+        <p class="stg">Innovative</p>
+        <p class="sint">Startups present themselves as pioneers with ideas of their own. Where does that novelty come from, and what does the legitimacy behind it cost?</p>
         <article class="pp">
           <p class="pstat">Under Review</p>
           <h3>Made at the Gate: How Support Intermediaries Constitute Outsider Innovation in Social Entrepreneurship</h3>
@@ -217,11 +223,27 @@ ul.work li::marker{color:var(--accent)}
             <li>2026 The Korean Society of Business Venturing and Entrepreneurship Spring Conference (South Korea)*</li>
           </ul>
         </article>
+        <article class="pp">
+          <p class="pstat">Working Paper</p>
+          <h3>When Big Firms Stumble, Startups Pay: Category Spillover and Startup Responses</h3>
+          <p class="pau"><b>Han, Y.</b>, &amp; Kim, S.-J.</p>
+          <p>Using the 2018 Cambridge Analytica scandal and Crunchbase data on 51,738 U.S. startups founded in 2015–2021, this paper shows that social-platform startups with no part in the scandal became less likely to raise funding. The penalty was largest for personal record services, where users log sensitive information for their own use, and disappeared for content-sharing services, which overlap more with Facebook’s business. Startups that stated that users can control their own exposure were more likely to raise funding.</p>
+          <p class="plink"><a href="papers/Han_Kim_When_Big_Firms_Stumble_Startups_Pay.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a> · <a href="papers/Han_Kim_When_Big_Firms_Stumble_Startups_Pay_slides.pdf" target="_blank" rel="noopener">Slides (PDF)</a></p>
+          <p class="plab">Awards</p>
+          <ul>
+            <li>Finalist (1 of 6 shortlisted papers), Graduate Student Paper Competition, 2026 KASBA Fall Conference (final results announced Nov. 2026)</li>
+          </ul>
+          <p class="plab">Presentations</p>
+          <ul>
+            <li>2026 Korean Academy of Management Fall Conference (South Korea)†</li>
+            <li>2026 The Korean Academic Society of Business Administration (KASBA) Fall Conference, Graduate Student Paper Competition, Finalist (South Korea)*†</li>
+          </ul>
+        </article>
       </div>
 
-      <div class="stage">
-        <p class="stg"><span>03</span> Back to the core</p>
-        <p class="sint">So are startups powerless? Not quite. Conforming may keep them alive, but what keeps them themselves is the core they refuse to trade away, even as its form keeps changing.</p>
+      <div class="stage" id="r-core">
+        <p class="stg">Ongoing work and next questions</p>
+        <p class="sint">Next, I ask what the idealized startup is, how it spreads, and when living up to it helps or hurts a venture, tracing the ideal in the language of founders, investors, and intermediaries and testing its consequences with large-scale venture data.</p>
         <article class="pp">
           <p class="pstat">Work in Progress</p>
           <h3>Glocalization Strategy of a Korean Social Venture</h3>
@@ -233,10 +255,6 @@ ul.work li::marker{color:var(--accent)}
             <li>2025 IRKOM Research Project, Interim Presentation, Yonsei University (Seoul, South Korea)</li>
           </ul>
         </article>
-      </div>
-
-      <div class="stage">
-        <p class="next"><b>Where I am going</b>Across these studies, what ventures show the world often differs from what keeps them alive. I want to ask what the ideal of a “startup” is that ventures conform to, how it is built, and when conforming to it helps a venture and when it costs the venture its core. I plan to trace this ideal in the language of founders, investors, and intermediaries, and then test its consequences with large-scale venture data.</p>
       </div>
 
       <p class="pnote">† Accepted and scheduled for presentation &nbsp;·&nbsp; * Presented under an earlier title</p>
@@ -253,7 +271,7 @@ ul.work li::marker{color:var(--accent)}
 
 <script>
 function show(){
-  var pages=['home','research','cv'], p=(location.hash||'#home').slice(1);
+  var pages=['home','research','cv'], p=(location.hash||'#home').slice(1); if(/^r-/.test(p)) p='research';
   if(pages.indexOf(p)<0) p='home';
   pages.forEach(function(k){document.getElementById('p-'+k).hidden=(k!==p);});
   document.querySelectorAll('nav a').forEach(function(a){ if(a.dataset.p===p) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
